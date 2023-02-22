@@ -15,5 +15,6 @@ npx eslint --init
 
 npm i -D eslint-plugin-import eslint-import-resolver-typescript
 
+npm i --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 
 
