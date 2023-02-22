@@ -13,8 +13,11 @@ npx eslint --init
 
 (check .eslintrc.json file)
 
+https://www.npmjs.com/package/eslint-import-resolver-typescript
 npm i -D eslint-plugin-import eslint-import-resolver-typescript
 
 npm i --save-dev prettier eslint-config-prettier eslint-plugin-prettier
+
+create .prettierrc file
 
 
