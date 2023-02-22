@@ -20,4 +20,6 @@ npm i --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 
 create .prettierrc file
 
+npm install @mui/material @emotion/react @emotion/styled
+
 
