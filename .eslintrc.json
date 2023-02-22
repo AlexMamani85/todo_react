@@ -19,6 +19,12 @@
         "react",
         "@typescript-eslint"
     ],
-    "rules": {
+    "rules": {},
+    "settings": {
+        "import/resolver": {
+            "typescript": {
+                
+            }
+        }
     }
 }
