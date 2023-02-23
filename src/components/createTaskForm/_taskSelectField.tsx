@@ -7,21 +7,39 @@ import {
   Select,
   SelectChangeEvent
 } from '@mui/material';
+import { ISelectField } from './interfaces/ISelectField';
 
-export  const TaskSelectField: FC = (): ReactElement => {
+export  const TaskSelectField: FC<ISelectField> = ( props ): ReactElement => {
+  const { 
+    value = '', 
+    label = 'selectBox', 
+    name = 'selectBox', 
+    items = [{ value: '', label: 'Add items' }], 
+    disabled = false, 
+    onChange = (e: SelectChangeEvent) => console.log(e)
+  } = props;
+
   return(
     <FormControl fullWidth size="small" >
-      <InputLabel id="status">Status</InputLabel>
+      <InputLabel id={`${name}-id`}>{label}</InputLabel>
       <Select
-        labelId="status"
-        id="status-select"
-        value=""
-        label="Status"
-        name="status"
-      >
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        labelId={`${name}-id`}
+        id={`${name}-id-select`}
+        value={value}
+        label={label}
+        name={name}
+        onChange={onChange}
+        disabled={disabled}
+      > 
+        {
+          items.map((item, index) => (
+            <MenuItem 
+              key={item.value + index} 
+              value={item.value}
+            >
+              {item.label}
+            </MenuItem>
+        ))}
       </Select>
     </FormControl>
     );
