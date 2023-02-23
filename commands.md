@@ -23,3 +23,5 @@ create .prettierrc file
 npm install @mui/material @emotion/react @emotion/styled
 
 mui.com/material-ui/customization/default-theme
+
+mui.com/material-ui/react-avatar/#letter-avatars
