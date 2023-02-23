@@ -8,6 +8,7 @@ import {
   SelectChangeEvent
 } from '@mui/material';
 import { ISelectField } from './interfaces/ISelectField';
+import PropTypes from 'prop-types';
 
 export  const TaskSelectField: FC<ISelectField> = ( props ): ReactElement => {
   const { 
@@ -43,4 +44,17 @@ export  const TaskSelectField: FC<ISelectField> = ( props ): ReactElement => {
       </Select>
     </FormControl>
     );
+};
+
+TaskSelectField.propTypes = {  
+  onChange: PropTypes.func,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  disabled: PropTypes.bool,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    }).isRequired,
+  )
 };
