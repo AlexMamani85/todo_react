@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, ReactElement, useState } from 'react';
 import { Box, Typography, Stack } from '@mui/material';
 
 import { TaskDateField } from './_taskDateField';
@@ -9,6 +9,12 @@ import { Status } from './enums/Status';
 import { Priority } from './enums/Priority';
 
 export const CreateTaskForm: FC = (): ReactElement => {
+  // declaring component states
+  const [title, setTitle] = useState<string | undefined> (undefined);
+  const [description, setDescription] = useState<string | undefined>(undefined);
+  const [date, setDate] = useState<Date | undefined> (new Date());
+  const [status, setStatus] = useState<string | undefined> (Status.todo);
+  const [priority, setPriority] = useState<string | undefined> (Priority.normal);
 
     return(
       <Box
