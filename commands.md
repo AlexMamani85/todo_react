@@ -40,3 +40,6 @@ https://mui.com/x/react-date-pickers/date-picker/
 npm i date-fns
 
 https://mui.com/material-ui/react-switch/
+
+npm i @tanstack/react-query
+npm i @tanstack/react-query-devtools
