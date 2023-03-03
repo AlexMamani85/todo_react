@@ -12,9 +12,9 @@ export const CreateTaskForm: FC = (): ReactElement => {
   // declaring component states
   const [title, setTitle] = useState<string | undefined> (undefined);
   const [description, setDescription] = useState<string | undefined>(undefined);
-  const [date, setDate] = useState<Date | undefined> (new Date());
-  const [status, setStatus] = useState<string | undefined> (Status.todo);
-  const [priority, setPriority] = useState<string | undefined> (Priority.normal);
+  const [date, setDate] = useState<Date | null> (new Date());
+  const [status, setStatus] = useState<string> (Status.todo);
+  const [priority, setPriority] = useState<string> (Priority.normal);
 
     return(
       <Box
