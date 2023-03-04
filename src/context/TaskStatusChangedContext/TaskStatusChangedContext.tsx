@@ -2,7 +2,7 @@ import React, { createContext, FC, ReactElement, PropsWithChildren,useState } fr
 
 export const TaskStatusChangedContext = createContext({
   updated: false,
-  toogle: () => {},
+  toogle: () => {console.log('exito')},
 
 });
 
