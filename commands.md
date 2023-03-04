@@ -1,4 +1,3 @@
-
 npx create-react-app todo-react --template typescript
 
 npx eslint --init
@@ -43,3 +42,9 @@ https://mui.com/material-ui/react-switch/
 
 npm i @tanstack/react-query
 npm i @tanstack/react-query-devtools
+
+tanstack.com/query/v4/docs/guides/queries
+
+https://tanstack.com/query/v4/docs/react/quick-start
+// Queries
+const query = useQuery({ queryKey: ['todos'], queryFn: getTodos })
